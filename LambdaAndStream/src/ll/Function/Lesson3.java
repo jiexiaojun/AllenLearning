@@ -83,9 +83,11 @@ public class Lesson3 {
 		System.out.println("开始打印绿苹果");
 		filterApples(appleList, (Apple a) -> "green".equals(a.getColor()))
 				.forEach((p) -> System.out.println(p.getColor() + " " + p.getWeight()));
+
 		System.out.println("开始打印重量大于150的苹果");
 		filterApples(appleList, (Apple a) -> a.getWeight() > 150)
 				.forEach((p) -> System.out.println(p.getColor() + " " + p.getWeight()));
+
 
 		System.out.println("开始打印重量大于150的绿苹果");
 		List<Apple> lista = filterApples(appleList, (Apple a) -> "green".equals(a.getColor()));

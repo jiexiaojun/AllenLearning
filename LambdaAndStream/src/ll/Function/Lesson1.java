@@ -111,15 +111,21 @@ public class Lesson1 {
 		System.out.println("开始打印绿苹果：");
 		List<Apple> a = filterGreenApples(appleList);
 		a.forEach((p) -> System.out.println(p.getColor() + " " + p.getWeight()));
+
+
 		System.out.println("开始打印重量大于150的苹果：");
 		List<Apple> b = filterHeavyApples(appleList);
 		b.forEach((p) -> System.out.println(p.getColor() + " " + p.getWeight()));
+
+
 		System.out.println("开始打印红苹果：");
 		filterApplesByColor(appleList, "red")
 				.forEach((p) -> System.out.println(p.getColor() + " " + p.getWeight()));
+
 		System.out.println("开始打印重量大于100的苹果：");
 		filterApplesByWeight(appleList, 100)
 				.forEach((p) -> System.out.println(p.getColor() + " " + p.getWeight()));
+
 		System.out.println("开始打印重量大于100的黄苹果：");
 		filterApples(appleList, "yellow", 100)
 				.forEach((p) -> System.out.println(p.getColor() + " " + p.getWeight()));

@@ -104,12 +104,15 @@ public class Lesson2 {
 		System.out.println("开始打印重量大于150的苹果");
 		filterApples(appleList, new Lesson2().new AppleHeavyWeightPredicate())
 				.forEach((p) -> System.out.println(p.getColor() + " " + p.getWeight()));
+
 		System.out.println("开始打印绿苹果");
 		filterApples(appleList, new Lesson2().new AppleGreenColorPredicate())
 				.forEach((p) -> System.out.println(p.getColor() + " " + p.getWeight()));
+
 		System.out.println("开始打印重量大于150的红苹果");
 		filterApples(appleList, new Lesson2().new AppleRedAndHeavyPredicate())
 				.forEach((p) -> System.out.println(p.getColor() + " " + p.getWeight()));
+
 		System.out.println("下面是匿名内部类：");
 		System.out.println("匿名内部类的好处就是不用像上面那样声明那么多内部类，使用匿名类省去这些类的声明");
 		System.out.println("开始打印红苹果");

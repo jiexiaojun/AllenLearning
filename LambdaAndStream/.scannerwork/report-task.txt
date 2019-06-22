@@ -1,0 +1,6 @@
+projectKey=LambdaAndStream
+serverUrl=http://127.0.0.1:9000
+serverVersion=7.7.0.23042
+dashboardUrl=http://127.0.0.1:9000/dashboard?id=LambdaAndStream
+ceTaskId=AWrFH5vHC2NpCDPrmLEs
+ceTaskUrl=http://127.0.0.1:9000/api/ce/task?id=AWrFH5vHC2NpCDPrmLEs
