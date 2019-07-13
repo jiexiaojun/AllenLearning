@@ -1,0 +1,42 @@
+
+package com.Allen.Thread;
+
+
+public class TestSync implements Runnable {
+	int b = 100;
+
+	synchronized void m1() throws InterruptedException {
+		b = 1000;
+		Thread.sleep(500); // 6
+		System.out.println("b=" + b);
+	}
+
+	synchronized void m2() throws InterruptedException {
+		Thread.sleep(250); // 5
+		b = 2000;
+	}
+
+	public static void main(String[] args) throws InterruptedException {
+		System.out.println("1");
+		TestSync tt = new TestSync();
+		System.out.println("2");
+		Thread t = new Thread(tt); // 1
+		System.out.println("3");
+		t.start(); // 2
+		System.out.println("4");
+		tt.m2(); // 3
+		System.out.println("main thread b=" + tt.b); // 4
+	}
+
+	@Override
+	public void run() {
+		try {
+			System.out.println("5");
+			m1();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
+

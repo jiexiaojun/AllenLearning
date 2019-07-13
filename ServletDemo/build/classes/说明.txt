@@ -1,0 +1,41 @@
+使用postman分别用get和post方式
+http://localhost:8080/ServletDemo/IndexServlet
+
+使用postman分别用get和post方式
+http://localhost:8080/ServletDemo/PageNotFoundServlet
+
+
+http://localhost:8080/ServletDemo/form.html
+
+
+通过web.xml的方式配置PageNotFoundServlet 在没有添加//@WebServlet("/IndexServlet")注解的情况下 
+所有的访问都是访问PageNotFoundServlet里面的doGet或doPost
+
+添加注解的情况下http://localhost:8080/ServletDemo/IndexServlet访问的是IndexServlet里面的doGet或doPost
+其他都是访问PageNotFoundServlet里面的doGet或doPost
+
+
+ServletContextListener（Servlet全局监听器）
+可以自写监听器比如在web.xml中配置<listener><listener-class>com.allen.listener.MyListener</listener-class></listener>
+
+
+自然而然的
+Spring中的  以下配置就也很眼熟了
+<listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+<context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+        classpath:applicationContext.xml
+    </param-value>
+</context-param>
+
+
+
+
+
+Servlet百度百科
+https://baike.baidu.com/item/Servlet
+https://www.ibm.com/developerworks/cn/java/j-lo-servlet/
+https://blog.csdn.net/qq_19782019/article/details/80292110
